@@ -83,7 +83,7 @@ body {
       rgba(11,11,16,0.6) 70%,
       rgba(11,11,16,0.4) 100%
     ),
-    url("asserts/images/burger.png");
+    url("assets/images/burger.png");
     
   background-size: cover;
   background-position: right center;

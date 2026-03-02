@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BurguerLab • Hamburgueria</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="#topo">
+        <span class="brand-dot"></span>
+        <strong>Burguer</strong><span>Lab</span>
+      </a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="nav">
+        <a href="#cardapio">Cardápio</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+        <button class="cart-pill" id="openCart">
+          Carrinho <span class="cart-badge" id="cartCount">0</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main id="topo" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <p class="kicker">Sabor artesanal • entrega rápida</p>
+        <h1>O hambúrguer perfeito<br/>para o seu fim de semana.</h1>
+        <p class="lead">
+          Smash, cheddar de verdade e pão macio. Monte seu pedido em 1 minuto e finalize no WhatsApp.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn primary" href="#cardapio">Ver Cardápio</a>
+          <button class="btn ghost" id="scrollToCart">Ir para o Carrinho</button>
+        </div>
+
+        <div class="hero-chips">
+          <span class="chip">🔥 Smash na chapa</span>
+          <span class="chip">🥤 Combo</span>
+          <span class="chip">🚀 30–45 min</span>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="hero-card-top">
+          <span class="tag">Mais pedido</span>
+          <h3>Classic Smash</h3>
+          <p>Carne, cheddar, cebola, picles e molho da casa.</p>
+        </div>
+        <div class="hero-card-bottom">
+          <div>
+            <small>A partir de</small>
+            <strong>R$ 28,90</strong>
+          </div>
+          <a class="btn small" href="#cardapio">Adicionar</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Cardápio -->
+  <section id="cardapio" class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>Cardápio</h2>
+          <p>Escolha seus itens e adicione ao carrinho.</p>
+        </div>
+
+        <div class="search-wrap">
+          <input id="searchInput" type="text" placeholder="Buscar no cardápio..." />
+          <span class="search-hint">Buscar</span>
+        </div>
+      </div>
+
+      <div class="grid" id="menuGrid">
+        <!-- JS injeta os cards aqui -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre -->
+  <section id="sobre" class="section alt">
+    <div class="container about">
+      <div>
+        <h2>Sobre a BurguerLab</h2>
+        <p>
+          Uma hamburgueria fictícia portfólio (mas com cara real).
+         </p>
+        <ul class="list">
+          <li>✅ Layout moderno e responsivo</li>
+          <li>✅ Carrinho com total e quantidade</li>
+          <li>✅ Finalização no WhatsApp</li>
+        </ul>
+      </div>
+
+      <div class="stats">
+        <div class="stat">
+          <strong>4.9</strong><span>avaliação média</span>
+        </div>
+        <div class="stat">
+          <strong>18</strong><span>itens no menu</span>
+        </div>
+        <div class="stat">
+          <strong>30–45</strong><span>min entrega</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="section">
+    <div class="container contact">
+      <div>
+        <h2>Contato</h2>
+        <p>Rua Exemplo, 123 • São Paulo - SP</p>
+        <p>Atendimento: 18h – 23h</p>
+      </div>
+      <a class="btn primary" id="whatsBtn" href="#" target="_blank" rel="noopener">
+        Pedir no WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- Drawer Carrinho -->
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+    <div class="cart-header">
+      <h3>Seu carrinho</h3>
+      <button class="icon-btn" id="closeCart" aria-label="Fechar carrinho">✕</button>
+    </div>
+
+    <div class="cart-body" id="cartItems">
+      <!-- JS injeta itens aqui -->
+    </div>
+
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <strong id="cartTotal">R$ 0,00</strong>
+      </div>
+
+      <button class="btn primary full" id="checkoutBtn">Finalizar no WhatsApp</button>
+      <button class="btn ghost full" id="clearBtn">Limpar carrinho</button>
+      <p class="cart-note">* Projeto front-end para portfólio.</p>
+    </div>
+  </aside>
+
+  <div class="backdrop" id="backdrop" aria-hidden="true"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

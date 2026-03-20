@@ -4,44 +4,59 @@ Landing page de uma hamburgueria fictícia desenvolvida para portfólio, com foc
 
 ---
 
-## 🚀 Demonstração
+## 🚀 Demonstração Online
 
-🔗 Em breve via GitHub Pages
+🔗 **Acesse o projeto:**  
+https://ederfelixsilva.github.io/burguerlab-landing/
 
 ---
 
-## 📌 Funcionalidades
+## 📸 Preview
+
+![Dashboard](./assets/images/dash.png)
+
+![Cardápio](./assets/images/cardapio.png)
+
+![Painel de Vendas](./assets/images/compra.png)
+
+---
+
+## ✨ Funcionalidades
 
 - Hero com imagem de fundo cinematográfica
 - Card de produto em destaque
 - Cardápio dinâmico renderizado via JavaScript
-- Sistema de busca (Ctrl + K)
+- Sistema de busca no cardápio
 - Carrinho com:
-  - Adicionar e remover itens
+  - Adição e remoção de itens
   - Controle de quantidade
   - Cálculo automático do total
-- Finalização do pedido via WhatsApp
+- Finalização de pedido via WhatsApp
 - Layout totalmente responsivo
 
 ---
 
-## 🛠 Tecnologias utilizadas
+## 🛠 Tecnologias Utilizadas
 
 - HTML5
 - CSS3 (Flexbox & Grid)
-- JavaScript (DOM Manipulation)
+- JavaScript (Manipulação do DOM)
 - Git & GitHub
+- GitHub Pages (Deploy)
 
 ---
 
-burguerlab
+## 📁 Estrutura do Projeto
+
+```text
+burguerlab-landing
 │── index.html
 │── style.css
 │── script.js
 └── assets
-└── images
-└── burger.png
-
+    └── images
+        └── burger.png
+```
 
 ---
 
@@ -53,19 +68,21 @@ Projeto desenvolvido com o objetivo de praticar:
 - Organização de CSS moderno
 - Manipulação do DOM
 - Lógica de carrinho de compras
-- Boas práticas de organização de projeto
+- Deploy utilizando GitHub Pages
+- Organização profissional de repositório
 
 ---
+## Deploy Online
+https://ederfelixsilva.github.io/burguerlab-landing/
 
 ## 👨‍💻 Autor
 
-Desenvolvido por Éder Félix Silva  
+**Éder Félix Silva**  
 📍 São Paulo - SP  
-🔗 [LinkedIn](https://www.linkedin.com/)  
-🔗 [GitHub](https://github.com/ederfelixsilva)
+
+🔗 GitHub: https://github.com/ederfelixsilva  
+🔗 LinkedIn: (coloque seu link aqui)
 
 ---
 
 ⭐ Projeto desenvolvido para fins educacionais e portfólio.
-
-## 📁 Estrutura do Projeto

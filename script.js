@@ -1,5 +1,5 @@
 // ===============================
-// Dados do menu (
+// Dados do menu 
 // ===============================
 const MENU = [
   { id: 1, nome: "Classic Smash", desc: "Carne, cheddar, cebola, picles e molho da casa.", preco: 28.90, tag: "smash" },
@@ -24,6 +24,7 @@ function qsa(sel) { return document.querySelectorAll(sel); }
 // Elementos
 // ===============================
 const menuGrid = qs("#menuGrid");
+const searchInput = qs("#searchInput");
 
 const cartDrawer = qs("#cartDrawer");
 const backdrop = qs("#backdrop");
@@ -44,7 +45,6 @@ const scrollToCartBtn = qs("#scrollToCart");
 
 // ===============================
 // Carrinho (estado)
-// 
 // ===============================
 let cart = {};
 
@@ -180,8 +180,7 @@ function renderCart() {
 // WhatsApp checkout
 // ===============================
 function buildWhatsLink() {
-  // Troque aqui pelo seu número (com DDI e DDD):
-  // Ex: 5511999999999 (Brasil +55, SP 11)
+  
   const phone = "5511999999999";
 
   const itens = Object.values(cart);
@@ -228,6 +227,28 @@ scrollToCartBtn.addEventListener("click", () => {
   openCart();
 });
 
+// ===============================
+// Search menu
+// ===============================
+searchInput.addEventListener("input", () => {
+  const q = searchInput.value.trim().toLowerCase();
+
+  const filtrado = MENU.filter((it) =>
+    it.nome.toLowerCase().includes(q) ||
+    it.desc.toLowerCase().includes(q) ||
+    it.tag.toLowerCase().includes(q)
+  );
+
+  renderMenu(filtrado);
+});
+
+// para focar a busca
+document.addEventListener("keydown", (e) => {
+  if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") {
+    e.preventDefault();
+    searchInput.focus();
+  }
+});
 
 // ===============================
 // Mobile menu
